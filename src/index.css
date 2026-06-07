@@ -1,0 +1,15 @@
+/* src/index.css */
+
+.caixa-animada {
+  /* Define que qualquer mudança visual vai demorar 0.3 segundos para acontecer de forma suave */
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* O pseudo-seletor :hover é ativado quando o mouse entra na área da caixa */
+.caixa-animada:hover {
+  /* Move a caixa 10 pixels para cima (eixo Y negativo) */
+  transform: translateY(-10px);
+  /* Cria uma sombra bonita ao redor para dar o efeito de profundidade (3D) */
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
