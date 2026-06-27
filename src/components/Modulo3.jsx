@@ -1,36 +1,30 @@
-// src/components/Modulo3.jsx
-
 import { useState } from 'react';
+import "../modulo3.css"
 
 export default function Modulo3() {
-  // 1. ESTADOS PARA OS REGISTRADORES
-  // No React, quando queremos ler o que o usuário digita em um <input>, 
-  // precisamos atrelar esse input a uma variável de estado.
-  // Vamos criar dois "registradores" virtuais para a nossa ULA somar.
+  // ESTADOS PARA OS REGISTRADORES
   const [regA, setRegA] = useState(0);
   const [regB, setRegB] = useState(0);
   
   // E um estado para guardar o resultado que sai da ULA
   const [resultado, setResultado] = useState(null);
 
-  // 2. FUNÇÃO DA ULA
-  // Esta função simula o ciclo de execução da nossa instrução ADD.
+  // FUNÇÃO DA ULA
   function processarNaULA() {
-    // No JavaScript, o sinal de + junta strings se não tomarmos cuidado.
-    // O comando Number() garante que estamos somando números inteiros.
     const soma = Number(regA) + Number(regB);
     setResultado(soma);
   }
 
   return (
-    <div style={{ textAlign: 'center', padding: '40px' }}>
+    <div className='main-div'>
+     
+      <div className='titulo'>
+        <h1>As Ferramentas</h1>
       
-      <h1 style={{ fontSize: '2.5rem', color: '#2c3e50' }}>⚙️ As Engrenagens (O Micro)</h1>
-      
-      <p style={{ fontSize: '1.2rem', color: '#34495e', maxWidth: '700px', margin: '0 auto', lineHeight: '1.6' }}>
-        Lá no fundo, a CPU não entende conceitos abstratos. Ela funciona como uma fábrica cheia de <strong>trilhos de trem (barramentos)</strong>. 
-        Os dados precisam estar nos lugares exatos — chamados <strong>Registradores</strong> — para que a máquina de calcular (a ULA) consiga operá-los.
-      </p>
+        <p className='introducao'>
+          Lá no fundo, a CPU é um monte de fios - ou melhor barramentos - ligando diversos componentes para transmissão dos dados em binário. Dentre esses componentes, os registradores e a ULA se destacam. 
+        </p>
+      </div>
 
       {/* Container Principal do Simulador da ULA */}
       <div style={{ backgroundColor: '#ecf0f1', padding: '40px', borderRadius: '15px', marginTop: '40px', display: 'inline-block', border: '3px solid #bdc3c7' }}>
@@ -88,6 +82,27 @@ export default function Modulo3() {
         </div>
       </div>
 
+      <div className="exp1-modulo3">
+        <div>
+          <h2 style={{textAlign:'center'}}>REGISTRADORES</h2>
+          <br />
+          <p><strong>Registradores são mecanismos muito rápidos de armazenamento bem próximos da CPU  e bem pequenos</strong> (sendo muito mais rápido do que a RAM). No RISC-V, tudo que o Chef for usar tem que estar nos registradores. Então, se for usar algo da RAM, primeiro se deve carregar o dado um registrador. Para escrever algo na memória é a mesma coisa.</p>
+          <br/>
+          <p>Além disso, cada registrador tem uma certa função dentro da arquitetura. Desse modo, podemos pensar que determinados registradores são como tábuas de cortar, guardando os ingredientes temporariamente para o processamento. Outros poderiam ser associados a panela, enviando argumentos para outra função (o fogão). E ainda seria possível comparar alguns com potes, que guardam os alimentos de forma segura e por tempo indefinido.</p>
+        </div>
+        <div>
+          <img src='src/assets/panela.png' alt='Panela'/>
+        </div>
+      </div>
+      <div style={{textAlign:'justify'}}>
+        <div style={{margin:'1rem'}}>
+          <h2 style={{textAlign:'start'}}>ULA</h2>
+          <br />
+          <p>Finalmente, a Unidade Lógica Aritmética, a famosa ULA ou ALU. Lá é onde é feito - como o próprio nome já diz - as operações lógicas e aritméticas do computador, isto é, <strong>a manipulação dos bits de entrada para gerar bits de resultado na saída </strong>. Por exemplo, pode-se fazer uma soma entre dois registradores - como ilustrado, ou verificar se um deles é igual a zero. Para fazer isso, a ULA é formada por diversos circuitos que conseguem por meio de uma lógica realizar as operações desejadas.</p>
+          <br />
+          <p>Na nossa analogia, um dos componentes internos da ULA poderia ser o fogão. Lá colocamos os ingredientes (dados), processamos eles, seja fritando ou cozinhando, e, por fim, temos um delecioso prato! Outro poderia ser o liquidificador, ou até mesmo a airfry.</p>
+        </div>
+      </div>
     </div>
   );
 }

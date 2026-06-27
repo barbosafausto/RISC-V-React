@@ -1,0 +1,23 @@
+.imagem-home{
+  max-width: 70%;
+  height: auto;
+  display: block;
+}
+
+.main-home{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: justify;
+    margin: 1rem;
+}
+
+@media (max-width: 800px) {
+    .main-home {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: justify;
+        margin: 1rem;
+    }
+}

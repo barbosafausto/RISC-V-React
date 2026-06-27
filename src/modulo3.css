@@ -1,0 +1,15 @@
+.exp1-modulo3{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: justify;
+    margin: 1rem;
+    margin-top: 3rem;
+}
+
+@media (max-width: 800px) {
+    .exp1-modulo3 {
+        display: grid;
+        grid-template-columns: auto;
+        margin-top: 5rem;
+    }
+}
