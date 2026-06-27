@@ -1,25 +1,17 @@
-// src/components/Simulador.jsx
-
 import { useState } from 'react';
 
 export default function Simulador() {
-  // 1. O ESTADO DO NOSSO PROCESSADOR
-  // 'fase' controla em qual ciclo de instrução estamos (de 0 a 4).
-  // É como se fosse o nosso PC (Program Counter) super simplificado.
+  // ESTADO DO PROCESSADOR
   const [fase, setFase] = useState(0);
 
-  // 2. A MEMÓRIA PRINCIPAL (RAM)
-  // Vamos simular uma memória com 3 posições.
-  // Posição 0 e 1 têm nossos "ingredientes". Posição 2 está vazia aguardando o resultado.
+  // Memória principal
   const memoria = [15, 25, fase === 4 ? 40 : "Vazio"]; 
 
-  // 3. OS REGISTRADORES
-  // O valor deles depende da 'fase' atual do clock.
+  // O valor dos registradores depende da 'fase' atual do clock.
   const regT0 = fase >= 1 ? memoria[0] : "Vazio";
   const regT1 = fase >= 2 ? memoria[1] : "Vazio";
   const regT2 = fase >= 3 ? 40 : "Vazio";
 
-  // 4. O SINAL DE CLOCK
   // Função que avança o ciclo do nosso processador
   function pulsarClock() {
     if (fase < 4) {
@@ -44,9 +36,9 @@ export default function Simulador() {
   return (
     <div style={{ textAlign: 'center', padding: '20px' }}>
       
-      <h1 style={{ fontSize: '2.5rem', color: '#2c3e50' }}>🕹️ Playground RISC-V</h1>
+      <h1 style={{ fontSize: '2.5rem', color: '#2c3e50' }}>Playground RISC-V</h1>
       <p style={{ fontSize: '1.2rem', color: '#34495e', maxWidth: '800px', margin: '0 auto' }}>
-        Veja o ciclo de busca e execução em tempo real. Aperte o botão de Clock para avançar o Program Counter (PC) e veja os dados viajando pelos trilhos do sistema!
+        Veja o Chef executando as instruções em tempo real! Clique em <strong>Pulsar Clock</strong> para executar a próxima instrução na memória. Se quiser rever, clique em <strong>Resetar</strong>.
       </p>
 
       {/* CONTROLES DE CLOCK */}
@@ -57,21 +49,29 @@ export default function Simulador() {
           style={{ 
             padding: '15px 30px', fontSize: '1.2rem', fontWeight: 'bold', borderRadius: '8px', 
             border: 'none', cursor: fase === 4 ? 'not-allowed' : 'pointer', 
-            backgroundColor: fase === 4 ? '#95a5a6' : '#e74c3c', color: 'white', marginRight: '15px'
+            backgroundColor: fase === 4 ? '#95a5a6' : '#27ae60', color: 'white', marginRight: '15px'
           }}
         >
-          ⏱️ Pulsar Clock (Avançar Fase)
+          Pulsar Clock 
         </button>
         
         <button 
           onClick={resetar}
-          style={{ padding: '15px 20px', fontSize: '1.2rem', backgroundColor: '#7f8c8d', color: 'white', border: 'none', borderRadius: '8px', cursor: 'pointer' }}
+          disabled={fase === 0}
+          style={{ 
+            padding: '15px 20px', 
+            fontSize: '1.2rem', 
+            backgroundColor: fase != 0 ? '#e74c3c' : '#7f8c8d', 
+            color: 'white', 
+            border: 'none', 
+            borderRadius: '8px', 
+            cursor: 'pointer' }}
         >
-          🔄 Resetar
+          Resetar
         </button>
       </div>
 
-      {/* PAINEL DE INFORMAÇÕES (O Display de 7 Segmentos do nosso simulador) */}
+      {/* PAINEL DE INFORMAÇÕES*/}
       <div style={{ backgroundColor: '#2c3e50', color: '#2ecc71', padding: '15px', borderRadius: '8px', maxWidth: '800px', margin: '0 auto 40px auto', fontFamily: 'monospace', fontSize: '1.2rem' }}>
         {descricoesInstrucao[fase]}
       </div>
