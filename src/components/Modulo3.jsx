@@ -86,9 +86,9 @@ export default function Modulo3() {
         <div>
           <h2 style={{textAlign:'center'}}>REGISTRADORES</h2>
           <br />
-          <p><strong>Registradores são mecanismos muito rápidos de armazenamento bem próximos da CPU  e bem pequenos</strong> (sendo muito mais rápido do que a RAM). No RISC-V, tudo que o Chef for usar tem que estar nos registradores. Então, se for usar algo da RAM, primeiro se deve carregar o dado um registrador. Para escrever algo na memória é a mesma coisa.</p>
+          <p><strong>Registradores são mecanismos muito rápidos de armazenamento bem próximos da CPU  e bem pequenos</strong> (sendo muito mais rápido do que a RAM). No RISC-V, tudo que o Chef for usar tem que estar nos registradores. Então, se for usar algo da RAM, primeiro se deve carregar o dado em um registrador. Para escrever algo na memória, o processo é o mesmo.</p>
           <br/>
-          <p>Além disso, cada registrador tem uma certa função dentro da arquitetura. Desse modo, podemos pensar que determinados registradores são como tábuas de cortar, guardando os ingredientes temporariamente para o processamento. Outros poderiam ser associados a panela, enviando argumentos para outra função (o fogão). E ainda seria possível comparar alguns com potes, que guardam os alimentos de forma segura e por tempo indefinido.</p>
+          <p>Além disso, cada registrador tem uma certa função dentro da arquitetura. Desse modo, podemos pensar que determinados registradores são como tábuas de cortar, guardando os ingredientes temporariamente para o processamento. Outros poderiam ser associados à panela, enviando argumentos para outra função (o fogão). E ainda seria possível comparar alguns com potes, que guardam os alimentos de forma segura e por tempo indefinido.</p>
         </div>
         <div>
           <img src='src/assets/panela.png' alt='Panela'/>
@@ -98,9 +98,9 @@ export default function Modulo3() {
         <div style={{margin:'1rem'}}>
           <h2 style={{textAlign:'start'}}>ULA</h2>
           <br />
-          <p>Finalmente, a Unidade Lógica Aritmética, a famosa ULA ou ALU. Lá é onde é feito - como o próprio nome já diz - as operações lógicas e aritméticas do computador, isto é, <strong>a manipulação dos bits de entrada para gerar bits de resultado na saída </strong>. Por exemplo, pode-se fazer uma soma entre dois registradores - como ilustrado, ou verificar se um deles é igual a zero. Para fazer isso, a ULA é formada por diversos circuitos que conseguem por meio de uma lógica realizar as operações desejadas.</p>
+          <p>Finalmente, a Unidade Lógica Aritmética, a famosa ULA ou ALU. Lá é onde são feitas - como o próprio nome já diz - as operações lógicas e aritméticas do computador, isto é, <strong>a manipulação dos bits de entrada para gerar bits de resultado na saída </strong>. Por exemplo, pode-se fazer uma soma entre dois registradores - como ilustrado, ou verificar se um deles é igual a zero. Para fazer isso, a ULA é formada por diversos circuitos que conseguem por meio de uma lógica realizar as operações desejadas.</p>
           <br />
-          <p>Na nossa analogia, um dos componentes internos da ULA poderia ser o fogão. Lá colocamos os ingredientes (dados), processamos eles, seja fritando ou cozinhando, e, por fim, temos um delecioso prato! Outro poderia ser o liquidificador, ou até mesmo a airfry.</p>
+          <p>Na nossa analogia, um dos componentes internos da ULA poderia ser o fogão. Lá colocamos os ingredientes (dados), processamos eles, seja fritando ou cozinhando, e, por fim, temos um delicioso prato! Outro poderia ser o liquidificador, ou até mesmo a airfryer.</p>
         </div>
       </div>
     </div>

@@ -35,7 +35,7 @@ export default function Modulo1() {
         <div style={{paddingRight:'2rem', borderRight:'4px solid #2c3e50'}} className='exp1-coluna-modulo1'>
           <h2 style={{textAlign: 'center'}}>O que é HD/SSD?</h2>
           <br />
-          <p>O Hard Disk Drive (HDD) - HD - é um dispositivo composto por diversos discos e cabeçotes. Quando ligado, os discos giram rapidamente e os cabeçotes ficam indo e voltando. De forma magnético, os discos são marcados pelo cabeçote, guardando informações. De modo semelhante, os cabeçotes lêem as informações guardadas. Por outro lado SSD (Solid State Drive) são mais rápido, apesar de menor vida útil. Os SSD's não possuem componentes mecânicos - como discos e cabeçotes -, mas somente blocos de memória flash, fazendo escrita e leitura de forma elétrica. Apesar dessa evolução, a RAM é mais rápida.</p>
+          <p>O Hard Disk Drive (HDD) - HD - é um dispositivo composto por diversos discos e cabeçotes. Quando ligado, os discos giram rapidamente e os cabeçotes ficam indo e voltando. De forma magnética, os discos são marcados pelo cabeçote, guardando informações. De modo semelhante, os cabeçotes leem as informações guardadas. Por outro lado SSD (Solid State Drive) são mais rápidos, apesar de menor vida útil. Os SSDs não possuem componentes mecânicos - como discos e cabeçotes -, mas somente blocos de memória flash, fazendo escrita e leitura de forma elétrica. Apesar dessa evolução, a RAM é mais rápida.</p>
           <br />
           <div className='exp1-resumo-modulo1'>
             <p>Em suma, podemos pontuar:</p>
@@ -51,12 +51,12 @@ export default function Modulo1() {
         <div style={{margin:'1rem', paddingLeft:'2rem'}} className='exp1-coluna-modulo1'>
           <h2 style={{textAlign: 'center'}}>O que é RAM?</h2>
           <br />
-          <p>A RAM (Random Acess Memory) é um dos principais componentes do computador. Ela é chamada de memória principal, isso porque tudo que a CPU precisa, tem que estar nela. Além disso, ela pode ser implementada de várias maneiras. A forma mais usual atualmente é DRAM, a RAM dinâmica. Nesse caso, ela é composta por vários capacitores - componentes capazes de armazenar carga - que guardam as informações. Como os capacitores ficam perdendo carga ao passar do tempo, eles tem que ficar sendo energizados. Ou seja, se o computador desligar, os dados são apagados. Os dados escritos e lidos manipulando esses componentes.</p>
+          <p>A RAM (Random Access Memory) é um dos principais componentes do computador. Ela é chamada de memória principal, isso porque tudo que a CPU precisa, tem que estar nela. Além disso, ela pode ser implementada de várias maneiras. A forma mais usual atualmente é DRAM, a RAM dinâmica. Nesse caso, ela é composta por vários capacitores - componentes capazes de armazenar carga - que guardam as informações. Como os capacitores ficam perdendo carga ao passar do tempo, eles têm que ficar sendo energizados. Ou seja, se o computador desligar, os dados são apagados. Os dados são escritos e lidos manipulando esses componentes.</p>
           <br />
           <p>Em suma, podemos pontuar:</p>
           <div className='exp1-resumo-modulo1'>
             <ul>
-              <li>É <strong>rápido</strong> pegar os ingradientes na bancada;</li>
+              <li>É <strong>rápido</strong> pegar os ingredientes na bancada;</li>
               <li>Na bancada, <strong>cabe pouca</strong> coisa;</li>
               <li>Quando o restaurante fecha, os ingredientes são <strong>retirados</strong> da bancada.</li>
             </ul>
@@ -70,7 +70,7 @@ export default function Modulo1() {
           <h2 style={{textAlign: 'center'}}>E quem é a CPU?</h2>
           <div className="exp2-caixa-texto-modulo1">
             <div>
-              <p>A CPU é um dos componentes mais importantes do computador. Sua principal função é realizar as operações lógicas e aritméticas do computador, operações de controle, e também de salvar informações na memória. Pense nela como um chefe de cozinha. Um restaurante está equipado com vários funcionários, como garçons que recebem, anotam os pedidos dos clientes e entregam a comida; assistentes que levam ingredientes para a cozinha e abrem e fecham o restaurante, entre outras funções. <strong>Porém, sem um cozinheiro, o restaurante não tem como funcionar.</strong> Nenhuma instrução (pedido) é executada e nenhum dos outros trabalhadores consegue fazer o seu trabalho corretamente. Veremos em breve como a CPU realiza essa função e porque o computador não é capaz de funcionar sem ela.</p>
+              <p>A CPU é um dos componentes mais importantes do computador. Sua principal função é realizar as operações lógicas e aritméticas do computador, operações de controle, e também de salvar informações na memória. Pense nela como um Chef de cozinha. Um restaurante está equipado com vários funcionários, como garçons que recebem, anotam os pedidos dos clientes e entregam a comida; assistentes que levam ingredientes para a cozinha e abrem e fecham o restaurante, entre outras funções. <strong>Porém, sem um cozinheiro, o restaurante não tem como funcionar.</strong> Nenhuma instrução (pedido) é executada e nenhum dos outros trabalhadores consegue fazer o seu trabalho corretamente. Veremos em breve como a CPU realiza essa função e porque o computador não é capaz de funcionar sem ela.</p>
             </div>
             <div style={{display:'flex', justifyContent:'center'}}>
               <img style={{width:'70%'}} src="src/assets/cpu.png" alt="" />
